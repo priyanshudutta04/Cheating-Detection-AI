@@ -20,6 +20,9 @@ def phoneDetect():
     model=YOLO('yolov8n.pt')
 
     cap=cv2.VideoCapture(0)
+    # fourcc = cv2.VideoWriter_fourcc(*'XVID') 
+    # fps = cap.get(cv2.CAP_PROP_FPS) 
+    # out = cv2.VideoWriter('demo.avi', fourcc, fps, (1280, 720))   
     cap.set(3,1280)
     cap.set(4,720)
 
@@ -53,12 +56,15 @@ def phoneDetect():
                 if flag==True:
                     cv2.putText(img, "WARNING: Phone Detected!", (50, 100), cv2.FONT_HERSHEY_SIMPLEX, 2.5, (0, 0, 255), 3)
 
+        
+        # out.write(img)
 
         cv2.imshow("Cam footage. Press 'Q' to exit.",img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
     cap.release()
+    # out.release()
     cv2.destroyAllWindows()
     return flag
 
