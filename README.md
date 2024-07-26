@@ -1,10 +1,6 @@
 # Cheating-Detection-AI
 A simple Real-time monitoring system to detect and alert use of phone using YOLO object detection.
 
-## Demo Video
-
-https://github.com/user-attachments/assets/097a041e-9f7c-455d-9c98-c8f3e8d17043
-
 ## Usage
 
 1. Clone the repository
